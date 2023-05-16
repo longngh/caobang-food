@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-wwidth, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="stylesheet" href="../css/form-responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <div id="banner">
+      <img src="../images/banner.jpg" alt="">
+      <h1>Cao Bang's food</h1>
+    </div>
+  </header>
+  <main>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" target="_blank" href="../index.html">Trang chủ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sản phẩm
+              </a>
+              <ul class="dropdown-content">
+                <li><a class="dropdown-item" target="_blank" href=" "> </a></li>
+                <li><a class="dropdown-item" target="_blank" href=" "> </a></li>
+                <li><a class="dropdown-item" target="_blank" href=" "> </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" target="_blank" href="./contact.html">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" target="_blank" href="./order.html">Đặt hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" target="_blank" href=" ">Giới thiệu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h2>Đặt hàng ngay</h2>
+    <form action="/action_page.php" onsubmit="myFunction()">
+      <div class="mb-3 row">
+        <div class="col-sm-10">
+          <label for="cake-name">Tên món ăn:</label>
+          <select name="cake-name" id="cake-name">
+            <option value="select-cake">- - - Lựa chọn món ăn - - -</option>
+            <option value=" "> </option>
+            <option value=" "> </option>
+            <option value=" "> </option>
+            <option value=" "> </option>
+          </select>
+          <p id="checkCake"></p>
+        </div>
+        <div class="col-sm-10">
+          <label for="your-name">Tên của bạn:</label>
+          <input placeholder="Vui lòng nhập tên đầy đủ của bạn" type="text" id="your-name" name="your-name">
+          <p id="checkName"></p>
+        </div>
+        <div class="col-sm-10">
+          <label for="message">Ghi chú:</label>
+          <input id="message" name="message">
+          <p id="checkMessage"></p>
+        </div>
+        <div class="col-sm-10">
+          <label for="deliver-date">Ngày giao hàng:</label>
+          <input type="text" id="datepicker" name="deliver-date">
+          <p id="checkDeliver-date"></p>
+        </div>
+        <div class="col-sm-10">
+          <label for="deliver-to">Giao hàng đến:</label>
+          <textarea name="deliver-to" id="deliver-to" rows="5" cols="20"></textarea>
+          <p id="checkDeliver-to"></p>
+        </div>
+        <div class="col-sm-10">
+          <table>
+            <tr>
+              <td><p>Gọi điện trước khi giao hàng?</p></td>
+              <td><label><input type="radio" name="call" value="yes"> Có</label>
+              <label><input type="radio" name="call" value="no" checked> Không</label></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <input type="submit" name="order" id="order" value="Đặt hàng">
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 by Chi's Cake</p>
+  </footer>
+  <script src="../javascript/order.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+1000000000000000000000000000000Y +1M +10D" });
+  } );
+  </script>
+</html>
